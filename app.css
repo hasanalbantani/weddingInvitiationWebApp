@@ -1,0 +1,81 @@
+.undangan{
+  display:flex;
+  width:100%;
+  height:400px;
+  background-color:#44c;
+}
+.img{
+  flex:60%;
+  background-color:#005;
+}
+.chat{
+  flex:40%;
+  background-color:#006;
+}
+.lokasi{
+  display:flex;
+  background-color:#44c;
+  width:100%;
+  height:175px;
+}
+nav{
+  display:flex;
+  background-color:#002;
+  color:#fff;
+  padding:20px;
+}
+.menu{
+  width:80%;
+  line-height:10vh;
+  font-size:30px;
+}
+.link{
+  display:flex;
+  justify-content:center;
+}
+.link a{
+  padding:20px;
+  text-decoration:none;
+  color:#fff;
+}
+.link a:hover{
+  transition:all 0.4s ease;
+  transform:translate(0px, -2px);
+  background-color:#00c;
+  border-radius:5%;
+}
+span{
+  padding: 20px;
+  font-size:30px;
+  cursor:pointer;
+  display: none;
+}
+span:hover{
+  transition:all 0.4s ease;
+  transform:translate(0px, -2px);
+  color: tomato;
+}
+.overlay{
+  width:250px;
+  position:fixed;
+  backgroundColor:rgba(0,0,0,0.2);
+  height:500px;
+  top:0;
+  left:0;
+  overflow-x:hidden;
+  textAlign:center;
+  transition: all 0.4s ease;
+  padding-top: 50px;
+  z-index: 1;
+}
+@media screen and (max-width:700px){
+  .undangan, .img, .chat, .lokasi{
+    flex-direction:column;
+  }
+  .link{
+    display:none;
+  }
+  span{
+    display: block;
+  }
+}
