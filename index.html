@@ -3,21 +3,50 @@
     <meta name="viewport" conten="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation Web App</title>
     <link rel="stylesheet" type="text/css" href="./app.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
   </head>
   <body>
     <nav>
       <div class="menu">Undangan</div>
       <span onclick="openMenu()">&equiv;</span>
       <div class="link">
-        <a href="" class="closeBtn" onclick="closeMenu">x</a>
+        <a class="closeBtn" onclick="closeMenu()">&raquo;</a>
         <a href="">Contact</a>
         <a href="">Chat</a>
         <a href="">Lokasi</a>
       </div>
     </nav>
     <div class="undangan">
-      <div class="img"></div>
-      <div class="chat"></div>
+      <div class="img">
+        <audio autoplay>
+          <source src="./wedding-song.mp3" type="audio/mpeg">
+        </audio>
+        <div class="text">
+          Dengan mengharap Ridho Allah SWT, kami bermaksud akan menyelenggararakan resepsi Pernikahan Kami yang Insya Allah akan diselenggarakan pada: <br><br>
+          <hr>
+          Hari Sabtu Malam Minggu <br>
+          Pukul 08:00 s/d Selesai <br>
+          Tempat : Kediaman Mempelai Wanita 
+          <hr>
+          <br><br>
+          Merupakan suatu kebahagiaan bagi kami apabila saudara/i berkenan hadir untuk memberikan doa restu pada pernikahan kami. <br>
+          Yang Berbahagia <br><br>
+          Hasan Al Bantani, S.Kom & Neni Septianah, S.Pd.
+        </div>
+      </div>
+      <div class="chat">
+        <div class="wrapper">
+          <div class="container">
+              <div class="chatHeader"></div>
+              <div class="avatar"></div>
+              <div class="chatContent"></div>
+          </div>
+          <div class="form">
+            <input type="text" name="chet" placeholder="Type a message..."><button>Send</button>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="lokasi"></div>
 

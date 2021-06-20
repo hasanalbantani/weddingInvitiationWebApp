@@ -1,22 +1,97 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .undangan{
   display:flex;
   width:100%;
-  height:400px;
+  height:450px;
   background-color:#44c;
 }
 .img{
   flex:60%;
-  background-color:#005;
+  background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.7)),url(http://www.shangri-la.com/uploadedImages/Shangri-la_Hotels/Shangri-La_Hotel,_Jakarta/SLJ-Bg-Weddings-Celebrations-Ceria-Room-Wedding-Setup.jpg);
+  background-size: cover;
+  background-position:center center ;
+  height: auto;
+  background-attachment: relative;
+}
+.text{
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
+}
+hr{
+  width: 75%;
 }
 .chat{
   flex:40%;
-  background-color:#006;
+  background-color:#ddd;
 }
+.wrapper{
+  top: 0;
+  height: 96%;
+  width: 100%;
+}
+.container{
+  border: 1px solid #ddd;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+.container .chatHeader{
+  background-color: #fafafa;
+  width: 100%;
+  height: 40px;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
+}
+.container .avatar{
+  flex: 20%;
+  margin: 9px;
+  float: left;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-image:url(https://png.pngtree.com/png-clipart/20190922/original/pngtree-business-male-user-avatar-vector-png-image_4774078.jpg);
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+}
+.chatContent{
+  float: left;
+  flex: 80%;
+  margin: 9px;
+  width: 88%;
+  height: 40px;
+  background-color: #aaa;
+  border-radius: 4px;
+}
+.chatContent::before{
+    content: 'Pengirim';
+    font-family: 'Dancing Script', cursive;
+    font-size: .9em;
+    color: #fff;
+  }
 .lokasi{
   display:flex;
   background-color:#44c;
   width:100%;
   height:175px;
+}
+input{
+  width: 90%;
+  border: none;
+  font-family: 'Dancing Script', cursive;
+}
+input:focus{
+  outline: none;
+}
+button{
+  width: 10%;
+  border: none;
 }
 nav{
   display:flex;
@@ -58,15 +133,25 @@ span:hover{
 .overlay{
   width:250px;
   position:fixed;
-  backgroundColor:rgba(0,0,0,0.2);
+  z-index: 999;
   height:500px;
-  top:0;
-  left:0;
+  top:10%;
+  right:0;
+  background-color:rgba(0,0,0,0.2);
   overflow-x:hidden;
-  textAlign:center;
   transition: all 0.4s ease;
   padding-top: 50px;
-  z-index: 1;
+}
+.overlay a{
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+}
+.overlay a:hover{
+  background-color: none;
+}
+.closeBtn{
+  display: none;
 }
 @media screen and (max-width:700px){
   .undangan, .img, .chat, .lokasi{
@@ -78,4 +163,17 @@ span:hover{
   span{
     display: block;
   }
-}
+  .closeBtn{
+    display: block;
+    color: red;
+  }
+  .chatContent{
+    flex: 80%;
+    width: 89%;
+  }
+  .chatContent::before{
+    content: 'Pengirim';
+    font-family: 'Dancing Script', cursive;
+    font-size: .9em;
+    color: #fff;
+  }
